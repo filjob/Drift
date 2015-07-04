@@ -1,0 +1,37 @@
+ember new derive
+cd derive
+ember serve
+
+ROUTE
+ember generate route derive # url http://localhost:4200/derive
+
+    app/routes/derive.js: This file controls the route.
+    app/templates/derive.hbs: A Handlebars template that defines the content that will appear at the named URL.
+    tests/unit/routes/derive-test.js : A test file where you can define a test for the functionality at your route.
+
+Generating an application route:
+ember generate route application
+
+    [?] Overwrite app/templates/application.hbs? Yes, overwrite
+      create app/routes/application.js
+      overwrite app/templates/application.hbs
+    installing
+      create tests/unit/routes/application-test.js
+
+=> now application.hbs only contans {{outlet}}
+
+Making the application route redirect to the clock route:
+open app/routes/application.js file and update the contents like so:
+
+    import Ember from 'ember';
+
+    export default Ember.Route.extend({
+	redirect: function() {
+	    this.transitionTo('derive');
+	}
+    });
+    
+=> url can now just be http://localhost:4200
+
+CONTROLLER
+https://developer.mozilla.org/en-US/Apps/Build/Modern_web_app_architecture/Controllers

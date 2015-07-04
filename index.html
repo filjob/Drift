@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Dérive</title>
+        <meta name="L'application Dérive affiche des informations permettant de se faire une idée de la dérive du bateau par rapport au cap vrai initialement entré." content="A privileged app stub">
+
+        <!--
+          viewport allows you to control how mobile browsers will render your content.
+          width=device-width tells mobile browsers to render your content across the
+          full width of the screen, without being zoomed out (by default it would render
+          it at a desktop width, then shrink it to fit.)
+          Read more about it here:
+          https://developer.mozilla.org/Mozilla/Mobile/Viewport_meta_tag
+        -->
+        <meta name="viewport" content="width=device-width">
+        
+        <link rel="stylesheet" href="css/app.css">
+        <link href="css/style/headers.css" rel="stylesheet" type="text/css">
+        <link href="css/style/lists.css" rel="stylesheet" type="text/css">
+        <link href="css/style/buttons.css" rel="stylesheet" type="text/css">
+        <link href="css/style/confirm.css" rel="stylesheet" type="text/css">
+        <!-- <link href="https://gaia-components.github.io/gaia-icons/gaia-icons-embedded.css" rel="stylesheet" type="text/css"> -->
+
+        <!--
+        Inline JavaScript code is not allowed for privileged and certified apps,
+        due to Content Security Policy restrictions.
+        You can read more about it here: https://developer.mozilla.org/Apps/CSP
+        Plus keeping your JavaScript separated from your HTML is always a good practice!
+
+        We're also using the 'defer' attribute. This allows us to tell the browser that
+        it should not wait for this file to load before continuing to load the rest of
+        resources in the page. Then, once everything has been loaded, it will parse and
+        execute the deferred files.
+        Read about defer: https://developer.mozilla.org/Web/HTML/Element/script#attr-defer
+        -->
+        <script type="text/javascript" src="js/app.js" defer></script>
+
+        <!--
+        The following two lines are for loading the localisations library
+        and the localisation data-so people can use the app in their
+        own language (as long as you provide translations).
+        <link rel="prefetch" type="application/l10n" href="locales/locales.ini" />
+        -->
+        <link rel="localization" href="locales/derive.{locale}.properties" />
+        <!--<meta name="availableLanguages" content="fr, en-US, en">-->
+        <meta name="defaultLanguage" content="fr">
+        <link rel="manifest" href="manifest.webapp" />
+	<script type="text/javascript" src="js/es6-promise.js" defer></script>
+        <script type="text/javascript" src="js/l10n.js" defer></script>
+        
+    </head>
+    <body>
+      <div id="afficheurs">
+	<section role="region">
+	  <header>
+	    <menu type="toolbar">
+	      <button id="close"><span class="icon icon-close"></span></button>
+	    </menu>
+	    <h1 data-l10n-id="titre"></h1>
+	  </header>
+	</section>
+	
+	<section data-type="list">
+	  <ul>
+	    <li>
+	      <p data-l10n-id="cap-vrai"></p>
+	      <p class="afficheur"><strong id="capvrai"></strong>°</p>
+	    </li>
+	    <li>
+	      <p data-l10n-id="cap-reel"></p>
+	      <p class="afficheur"><strong id="capreel"></strong>°</p>
+	    </li>
+	    <li>
+	      <p data-l10n-id="derive"></p>
+	      <p class="afficheur"><strong id="derive"></strong><span id="unit">NM</span></p>
+	    </li>
+	    <li>
+	      <p data-l10n-id="vitesse"></p>
+	      <p class="afficheur"><strong id="vitesse"></strong> kn</p>
+	    </li>
+	    <li>
+	      <p data-l10n-id="temps"></p>
+	      <p class="afficheur"><strong id="temps"></strong></p>
+	    </li>
+	  </ul>
+	</section>
+	
+	<section style="margin-bottom: 30px">
+	  <button id="startbutton" class = "recommend" data-l10n-id="demarrer"></button>
+	</section>
+      </div>
+      
+      <div id="erreur">
+	<!-- Default confirm dialog -->
+	<form role="dialog" data-type="confirm">
+	  <section>
+	    <h1 data-l10n-id="erreur"></h1> <!-- this heading is optional -->
+	    <p data-l10n-id="erreur-message"></p>
+	  </section>
+	  <menu>
+	    <button id="errorbutton" class="recommend">OK</button>
+	  </menu>
+	</form>
+      </div>
+    </body>
+</html>

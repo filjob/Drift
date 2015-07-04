@@ -1,0 +1,43 @@
+{
+  "version": "0.1.0",
+  "name": "Dérive",
+  "description": "L'application Dérive affiche des informations permettant de se faire une idée de la dérive du bateau par rapport au cap vrai initialement entré.",
+  "launch_path": "/index.html",
+  "icons": {
+    "16": "/img/icons/icon16x16.png",
+    "48": "/img/icons/icon48x48.png",
+    "60": "/img/icons/icon60x60.png",
+    "128": "/img/icons/icon128x128.png"
+  },
+  "developer": {
+    "name": "Olivier Bézie",
+    "url": "http://www.bezie.com"
+  },
+  "type": "privileged",
+  "permissions": {
+    "geolocation":{ 
+      "description": "The backbone of the app"  
+    },
+    "storage":{ 
+      "description": "Required to store the drifting information each time a new position is received"
+    }
+  },
+  "installs_allowed_from": [
+    "*"
+  ],
+  "orientation": "portrait",
+  "default_locale": "fr",
+  "locales": {
+    "en": {
+      "name": "Drift",
+      "description": "The Drift application displays information about the drift of the boat in comparison to the true bearing initialy entered"
+    }
+  },
+  "locales": {
+    "en-US": {
+      "name": "Drift",
+      "description": "The Drift application displays information about the drift of the boat in comparison to the true bearing initialy entered"
+    }
+  }
+
+}
