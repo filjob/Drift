@@ -40,4 +40,12 @@ where φ is latitude, λ is longitude
 where φ is latitude, λ is longitude, θ is the heading (clockwise from north), δ is the angular distance d/R; d being the distance travelled, R the earth’s radius (mean radius = 6,371,000 m)  
 
 ## Source and reference
+<<<<<<< HEAD
 * [http://www.movable-type.co.uk/scripts/latlong.html](http://www.movable-type.co.uk/scripts/latlong.html) by Chris Veness: Formulas for various calculation with coordinates and corresponding javascript code.
+=======
+* [Calculate distance, bearing and more between Latitude/Longitude points](http://www.movable-type.co.uk/scripts/latlong.html) by Chris Veness: Formulas for various calculation with coordinates and corresponding javascript code.
+* [Current and Drift](http://www.plato.is/navigation/current_and_drift/) inspired my above drawing
+* Help requested in Stack Overflow:
+  + [How to properly close a Firefox OS app?](http://stackoverflow.com/questions/31076284/how-to-properly-close-a-firefox-os-app)
+  + [innerhtml value does not change when data-l10n-id attribute is changed](http://stackoverflow.com/questions/30435230/innerhtml-value-does-not-change-when-data-l10n-id-attribute-is-changed)
+>>>>>>> 31de8304823b334fef19a1a21998f96722ec1b17
