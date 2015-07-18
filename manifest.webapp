@@ -18,9 +18,6 @@
     "geolocation":{ 
       "description": "The backbone of the app"  
     },
-    "storage":{ 
-      "description": "Required to store the drifting information each time a new position is received"
-    }
   },
   "installs_allowed_from": [
     "*"
