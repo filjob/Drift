@@ -69,7 +69,7 @@ where φ is latitude, λ is longitude, θ is the heading (clockwise from north),
 ***
 
 ## Source and reference
-<<<<<<< HEAD
+
 * [http://www.movable-type.co.uk/scripts/latlong.html](http://www.movable-type.co.uk/scripts/latlong.html) by Chris Veness: Formulas for various calculation with coordinates and corresponding javascript code.
 =======
 * [Calculate distance, bearing and more between Latitude/Longitude points](http://www.movable-type.co.uk/scripts/latlong.html) by Chris Veness: Formulas for various calculation with coordinates and corresponding javascript code.
