@@ -66,6 +66,12 @@ where φ is latitude, λ is longitude, θ is the heading (clockwise from north),
 ### 0.2.x
 - Bugfix
 
+### 0.3.0
+- Drift threshold trigering an alarm
+
+### 0.3.x
+- Bugfix
+
 ***
 
 ## Source and reference
