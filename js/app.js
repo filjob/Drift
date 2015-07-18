@@ -7,9 +7,6 @@ window.addEventListener('DOMContentLoaded', function() {
   // We'll ask the browser to use strict code to help us catch errors earlier.
   // https://developer.mozilla.org/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode
   'use strict';
-  
-  //document.webL10n.setLanguage("fr");
-  //navigator.mozL10n.language.code = "fr";
 
   document.getElementById("erreur").style.visibility = "hidden";
  
@@ -50,7 +47,7 @@ window.addEventListener('DOMContentLoaded', function() {
         capReel = calculCapReel(latitude0, longitude0, latitude, longitude);
         derive = calculdDerive(latitude0, longitude0, latitude, longitude, capVrai);
 	
-	      temps = Math.round((position.timestamp - temps0) / 1000);
+	      temps = Math.round((position.timestamp - temps0) / 1000.);
       }
   
       vitesse = position.coords.speed;
@@ -58,8 +55,15 @@ window.addEventListener('DOMContentLoaded', function() {
       
       document.getElementById("vitesse").innerHTML = vitesse.toFixed(1);
       document.getElementById("capreel").innerHTML = Math.round(capReel);
-      document.getElementById("derive").innerHTML = derive["dist"].toFixed(1);
+      
+      if (derive["unit"] == " m") {
+	document.getElementById("derive").innerHTML = Math.round(derive["dist"]);
+      }
+      else {
+	document.getElementById("derive").innerHTML = derive["dist"].toFixed(1);
+      }
       document.getElementById("unit").innerHTML = derive["unit"];
+      
       document.getElementById("precision").innerHTML = position.coords.accuracy.toFixed(1);
       document.getElementById("temps").innerHTML = temps.toHHMMSS();
 	
@@ -76,21 +80,20 @@ window.addEventListener('DOMContentLoaded', function() {
       timeout           : Infinity
     };
     
-    //navigator.geolocation.getCurrentPosition(success, error);
     var geo = navigator.geolocation.watchPosition(success, error, options);
     
-    document.getElementById("close").addEventListener("click", function( event ) {
+    document.getElementById("close").addEventListener("click", function(event) {
       if (geo) {navigator.geolocation.clearWatch(geo);}
       window.close();
     });
     
   });
   
-  document.getElementById("errorbutton").addEventListener("click", function( event ) {
+  document.getElementById("errorbutton").addEventListener("click", function(event) {
     document.getElementById("erreur").style.visibility="hidden";
   });
   
-  document.getElementById("close").addEventListener("click", function( event ) {
+  document.getElementById("close").addEventListener("click", function(event) {
     window.close();
   });
 });
