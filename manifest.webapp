@@ -18,11 +18,8 @@
   "permissions": {
     "geolocation":{ 
       "description": "The backbone of the app"  
-    },
+    }
   },
-  "installs_allowed_from": [
-    "*"
-  ],
   "orientation": "portrait",
   "default_locale": "fr",
   "locales": {
