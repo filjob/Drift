@@ -1,7 +1,11 @@
 # Drift
 
+***
+
 ## Introduction
 Drift is a Firefox OS app calculating the drift (of a boat for example). It displays information about the drift in comparison to the true bearing initialy entered.
+
+***
 
 ## Definitions and asumptions
 * The true heading is the GPS heading that is taken as a reference to detect and calculate the drift.
@@ -11,12 +15,16 @@ Drift is a Firefox OS app calculating the drift (of a boat for example). It disp
 
 ![](https://github.com/filjob/Drift/blob/master/doc/drift.png)
 
+***
+
 ## Displayed information
 * The true heading in degree (integer, abr. '°')
 * The real heading in degree (integer, abr. '°')
 * The drift in meter (integer, abr. 'm') if less than 1/10 nautical mile, in nautical mile (1 decimal point, abr. 'NM') if greater or equal to 1/10 NM
 * The speed in knots (1 decimal point, abr. 'kn')
 * The time (format 'HH:MM:SS') since the true heading has been recorded.
+
+***
 
 ## Calculation method
 Different formulas are available to calculate distance between coordinates, corresponding heading, new coordinates. Chris Veness is exposing them in a great article called "[Calculate distance, bearing and more between Latitude/Longitude points](http://www.movable-type.co.uk/scripts/latlong.html)". The formulas which have been retained from this article for the Drift application are the following:
@@ -38,6 +46,27 @@ where φ is latitude, λ is longitude
 φ2 = asin( sin φ1 ⋅ cos δ + cos φ1 ⋅ sin δ ⋅ cos θ )  
 λ2 = λ1 + atan2( sin θ ⋅ sin δ ⋅ cos φ1, cos δ − sin φ1 ⋅ sin φ2 )  
 where φ is latitude, λ is longitude, θ is the heading (clockwise from north), δ is the angular distance d/R; d being the distance travelled, R the earth’s radius (mean radius = 6,371,000 m)  
+
+***
+
+## Development plan
+### 0.1.0 - beta, released
+- Core drift functionality
+- Languages: fr, en, en-US
+
+### 0.1.x
+- Bugfix
+- Languages: de, es
+
+### 0.2.0
+- Language selection
+- GPS accuracy setting
+- Time between 2 calculation setting
+
+### 0.2.x
+- Bugfix
+
+***
 
 ## Source and reference
 <<<<<<< HEAD
