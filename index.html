@@ -15,10 +15,6 @@
         <meta name="viewport" content="width=device-width">
         
         <link rel="stylesheet" href="css/app.css">
-        <link href="css/style/headers.css" rel="stylesheet" type="text/css">
-        <link href="css/style/lists.css" rel="stylesheet" type="text/css">
-        <link href="css/style/buttons.css" rel="stylesheet" type="text/css">
-        <link href="css/style/confirm.css" rel="stylesheet" type="text/css">
         <!-- <link href="https://gaia-components.github.io/gaia-icons/gaia-icons-embedded.css" rel="stylesheet" type="text/css"> -->
 
         <!--
@@ -35,16 +31,17 @@
         <!--<meta name="defaultLanguage" content="fr">-->
         <link rel="localization" href="locales/derive.{locale}.properties" />
         <link rel="manifest" href="manifest.webapp" />
-	<script type="text/javascript" src="js/es6-promise.js" defer></script>
-        <script type="text/javascript" src="js/l10n.js" defer></script>
+	<script type="text/javascript" src="js/lib/es6-promise.js" defer></script>
+        <script type="text/javascript" src="js/lib/l10n.js" defer></script>
         
     </head>
     <body>
       <div id="afficheurs">
-	<section role="region">
+	<section role="region" class="skin-dark">
 	  <header>
 	    <menu type="toolbar">
 	      <button id="close"><span class="icon icon-close"></span></button>
+	      <!--<a href=#><span id="close">X</span></a>-->
 	    </menu>
 	    <h1 data-l10n-id="titre"></h1>
 	  </header>
@@ -60,13 +57,17 @@
 	      <p data-l10n-id="cap-reel"></p>
 	      <p class="afficheur"><strong id="capreel"></strong>°</p>
 	    </li>
+			<li>
+	      <p data-l10n-id="latitude"></p>
+	      <p class="afficheur"><strong id="latitude"></strong></p>
+	    </li>
+			<li>
+	      <p data-l10n-id="longitude"></p>
+	      <p class="afficheur"><strong id="longitude"></strong></p>
+	    </li>
 	    <li>
 	      <p data-l10n-id="derive"></p>
 	      <p class="afficheur"><strong id="derive"></strong><span id="unit">NM</span></p>
-	    </li>
-	    <li>
-	      <p data-l10n-id="precision"></p>
-	      <p class="afficheur"><strong id="precision"></strong> m</p>
 	    </li>
 	    <li>
 	      <p data-l10n-id="vitesse"></p>
@@ -75,12 +76,15 @@
 	    <li>
 	      <p data-l10n-id="temps"></p>
 	      <p class="afficheur"><strong id="temps"></strong></p>
+	    </li>	    <li>
+	      <p data-l10n-id="precision"></p>
+	      <p class="afficheur"><strong id="precision"></strong> m</p>
 	    </li>
 	  </ul>
 	</section>
 	
 	<section style="margin-bottom: 30px">
-	  <button id="startbutton" class = "recommend" data-l10n-id="demarrer"></button>
+	  <button id="startbutton" class = "dark-skin" data-l10n-id="demarrer"></button>
 	</section>
       </div>
       
