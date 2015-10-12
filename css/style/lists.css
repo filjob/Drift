@@ -9,9 +9,10 @@
 
 [data-type="list"] ul {
   list-style: none;
-  margin: 0.5rem 0 0 0; /* added */
-  padding: 0;
+  margin: 1rem 0 0 0; /* added */
+  padding: 0 0 0 0; /* added */
   overflow: hidden;
+  border-top: solid 0.1rem #e7e7e7; /* added*/
 
 }
 
@@ -44,6 +45,7 @@
   margin: 0;
   display: block;
   position: relative;
+  padding: 0.25rem 0 0 0; /* added */
 }
 
 [data-type="list"] li:last-child {
@@ -140,10 +142,10 @@ li a:active {
   text-overflow: ellipsis;
   border: none;
   display: block;
-  margin: 0;
+  margin: -0.2rem 0 0 0; /*top was 0*/
   color: #858585;
-  font-size: 1.8rem; /* change from 1.5 to 1.8 */
-  line-height: 2rem;
+  font-size: 2.5rem; /* change from 1.5 to 1.8 */
+  line-height: 2rem; /*was 2rem*/
 }
 
 [data-type="list"] li p:first-of-type {
@@ -151,6 +153,7 @@ li a:active {
   line-height: 1rem; /*change from 2.2 to 1 */
   color: #333;
   padding: 0 0 0;
+  margin-top: 0; /*Added*/
 }
 
 [data-type="list"] li p:only-child,
@@ -164,9 +167,9 @@ li a:active {
 }
 
 [data-type="list"] li p strong { /* added */
-  font-size: 1.8rem;
+  font-size: 2.5rem;
   font-style: normal;
-  padding: 0 0 0 5rem;
+  padding: 0 0 0 6rem;
 }
 
 [data-type="list"] li p time {

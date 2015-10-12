@@ -12,17 +12,19 @@ Drift is a Firefox OS app calculating the drift (of a boat for example). It disp
 * The indicated true heading is accurate enough if the precision reported by the GPS is less than 5 meters.
 * The real heading is the real course of the vessel and is calculated based on the coordinates recorded at the same time of the true heading and the current coordinates of the vessel.
 * The drift is the distance between the current coordinates and the coordinates that the vessel would have had if he had followed the true heading on the same distance.
-
-![](https://github.com/filjob/Drift/blob/master/doc/drift.png)
+![drift relative](/images/drift.png)
 
 ***
 
 ## Displayed information
 * The true heading in degree (integer, abr. '°')
 * The real heading in degree (integer, abr. '°')
+* The current coordinates
 * The drift in meter (integer, abr. 'm') if less than 1/10 nautical mile, in nautical mile (1 decimal point, abr. 'NM') if greater or equal to 1/10 NM
+* The current coordinates
 * The speed in knots (1 decimal point, abr. 'kn')
 * The time (format 'HH:MM:SS') since the true heading has been recorded.
+* the accuracy of the GPS
 
 ***
 
@@ -54,30 +56,38 @@ where φ is latitude, λ is longitude, θ is the heading (clockwise from north),
 - Core drift functionality
 - Languages: fr, en, en-US
 
-### 0.1.x
+### 1.0.0 - release submitted
+- Bugfix
+  1. Correction of the formula to calculate drift distance
+  2. Integer systematically converted to float before calculation
+  3. Code clean-up
+- Display of the current coordinates added
+- Look & feel improvement: new logo, background image, new colors
+
+### 1.0.x
 - Bugfix
 - Languages: de, es
 
-### 0.2.0
+### 1.1.0
 - Language selection
 - GPS accuracy setting
 - Time between 2 calculation setting
 
-### 0.2.x
+### 1.1.x
 - Bugfix
 
-### 0.3.0
+### 1.2.0
 - Drift threshold trigering an alarm
 
-### 0.3.x
+### 1.2.x
 - Bugfix
 
 ***
 
 ## Source and reference
-* [http://www.movable-type.co.uk/scripts/latlong.html](http://www.movable-type.co.uk/scripts/latlong.html) by Chris Veness: Formulas for various calculation with coordinates and corresponding javascript code.
 * [Calculate distance, bearing and more between Latitude/Longitude points](http://www.movable-type.co.uk/scripts/latlong.html) by Chris Veness: Formulas for various calculation with coordinates and corresponding javascript code.
 * [Current and Drift](http://www.plato.is/navigation/current_and_drift/) inspired my above drawing
 * Help requested in Stack Overflow:
   + [How to properly close a Firefox OS app?](http://stackoverflow.com/questions/31076284/how-to-properly-close-a-firefox-os-app)
   + [innerhtml value does not change when data-l10n-id attribute is changed](http://stackoverflow.com/questions/30435230/innerhtml-value-does-not-change-when-data-l10n-id-attribute-is-changed)
+* [Compass picture](http://all-free-download.com/free-photos/download/compass_02_hd_picture_166637.html) by [zcool.com.cn](http://zcool.com.cn): The photo used to design the app icon and backround
