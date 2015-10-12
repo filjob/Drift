@@ -12,8 +12,6 @@ Drift is a Firefox OS app calculating the drift (of a boat for example). It disp
 * The indicated true heading is accurate enough if the precision reported by the GPS is less than 5 meters.
 * The real heading is the real course of the vessel and is calculated based on the coordinates recorded at the same time of the true heading and the current coordinates of the vessel.
 * The drift is the distance between the current coordinates and the coordinates that the vessel would have had if he had followed the true heading on the same distance.
-
-![drift absolute](https://raw.githubusercontent.com/filjob/Drift/development/images/drift.png)
 ![drift relative](/images/drift.png)
 ***
 
